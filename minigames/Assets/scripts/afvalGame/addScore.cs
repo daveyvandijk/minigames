@@ -4,32 +4,41 @@ using UnityEngine;
 
 public class addScore : MonoBehaviour
 {
-    public float count = 0;
-    public GameObject afval;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int score = 0;
+    public int objectsToDestroy = 5;
+    public GameObject[] objects;
+    public Camera mainCam;
+    public Camera secondCam;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (count == 5)
+        if (score >= objectsToDestroy)
         {
-            Debug.Log("HET WERKT");
+            SwitchCamera();
         }
     }
 
-    internal void OnTriggerEnter(Collider other)
+    private void SwitchCamera()
     {
-        Debug.Log("Object verweiderd +1");
-        if (other.tag == "trash")
-        {
-            count++;
-            Destroy(other.gameObject);
+        mainCam.enabled = true;
+        secondCam.enabled = false;
+    }
 
+    public void IncrementScore()
+    {
+        score++;
+
+        if (score >= objectsToDestroy)
+        {
+            SwitchCamera();
         }
-        
+    }
+
+    public void DestroyObjects()
+    {
+        for (int i = 0; i < objects.Length; i++)
+        {
+            Destroy(objects[i]);
+        }
     }
 }
