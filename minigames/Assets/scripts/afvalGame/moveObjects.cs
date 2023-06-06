@@ -8,53 +8,23 @@ public class moveObjects : MonoBehaviour
 {
     private Vector3 mOffset;
     private float mZcoord;
-    public int count = 0;
-    
+    public Camera secondCam;
 
-    [SerializeField] public GameObject stuffOverRoad;
-    GameObject thingOverRoad;
-
-    private void Start()
+    private void OnMouseDown()
     {
-
-    }
-
-     private void Update()
-     {
-   //     if (Input.GetMouseButtonDown(0))
-   //     {
-   //       CreateStuffOnRoad();
-   //      }
-     }
-
-   //  void CreateStuffOnRoad()
-   //  {
-   //      Vector3 randomizePosition = new Vector3(Random.Range(-4, 7), 2, Random.Range(0, 0));
-   //      Quaternion randomizeRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-   //      thingOverRoad = Instantiate(stuffOverRoad, randomizePosition, randomizeRotation);
-   //  }
-
-    void OnMouseDown()
-    {
-        mZcoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-
+        mZcoord = secondCam.WorldToScreenPoint(gameObject.transform.position).z;
         mOffset = gameObject.transform.position - GetMouseWorldPos();
     }
 
     private Vector3 GetMouseWorldPos()
     {
-        Vector3 mousepoint = Input.mousePosition;
-
-        mousepoint.z = mZcoord;
-
-        return Camera.main.ScreenToWorldPoint(mousepoint);
+        Vector3 mousePoint = Input.mousePosition;
+        mousePoint.z = mZcoord;
+        return secondCam.ScreenToWorldPoint(mousePoint);
     }
 
-    void OnMouseDrag()
+    private void OnMouseDrag()
     {
         transform.position = GetMouseWorldPos() + mOffset;
     }
-
-    
-
 }

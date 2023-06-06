@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 150221555}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,11 +537,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247917578}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6eb13e4bf96de84a9a0830a964db121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rearCamera: {fileID: 0}
+  driverCamera: {fileID: 0}
+  toggle: 0
 --- !u!1 &252378629
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,6 +890,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3599438490664720628, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
+      propertyPath: secondCam
+      value: 
+      objectReference: {fileID: 1809369101}
     - target: {fileID: 3599438490664720631, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
       propertyPath: m_Name
       value: Cube (5)
@@ -1129,6 +1136,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3599438490664720628, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
+      propertyPath: secondCam
+      value: 
+      objectReference: {fileID: 1809369101}
     - target: {fileID: 3599438490664720631, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
       propertyPath: m_Name
       value: Cube (1)
@@ -1503,7 +1514,7 @@ GameObject:
   - component: {fileID: 565058148}
   m_Layer: 0
   m_Name: trashGame
-  m_TagString: Untagged
+  m_TagString: trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2809,6 +2820,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3599438490664720628, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
+      propertyPath: secondCam
+      value: 
+      objectReference: {fileID: 1809369101}
     - target: {fileID: 3599438490664720631, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
       propertyPath: m_Name
       value: Cube (4)
@@ -3928,6 +3943,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3599438490664720628, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
+      propertyPath: secondCam
+      value: 
+      objectReference: {fileID: 1809369101}
     - target: {fileID: 3599438490664720631, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
       propertyPath: m_Name
       value: Cube (2)
@@ -4313,6 +4332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6eb13e4bf96de84a9a0830a964db121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rearCamera: {fileID: 963194227}
+  driverCamera: {fileID: 1809369101}
+  toggle: 0
 --- !u!54 &1568676417
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4448,11 +4470,11 @@ GameObject:
   - component: {fileID: 1809369100}
   m_Layer: 0
   m_Name: CameraTrashGame
-  m_TagString: Untagged
+  m_TagString: SecondCam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1809369099
 Transform:
   m_ObjectHideFlags: 0
@@ -4483,7 +4505,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809369098}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -4911,6 +4933,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3599438490664720628, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
+      propertyPath: secondCam
+      value: 
+      objectReference: {fileID: 1809369101}
     - target: {fileID: 3599438490664720631, guid: fe90146ba41893b4aac5f43203789ed6, type: 3}
       propertyPath: m_Name
       value: Cube (3)

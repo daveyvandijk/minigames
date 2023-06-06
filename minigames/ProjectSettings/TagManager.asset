@@ -8,6 +8,7 @@ TagManager:
   - trash
   - metior
   - StartGame
+  - SecondCam
   layers:
   - Default
   - TransparentFX
